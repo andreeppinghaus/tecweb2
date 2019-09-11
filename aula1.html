@@ -1,0 +1,46 @@
+<!--
+Faça um programa em javascript para 
+ler 2 notas,
+calcular a media e exibir o resultado.
+-->
+<!doctype html>
+<html>
+    <head>
+        <meta charset=utf-8>
+        <title>Cálculo da média</title>
+    </head>
+<body>
+<p>Digite numero 1</p>
+<input type=number id=n1 value=0 min="1" max="10"> 
+<br>
+<p>Digite numero 2</p>
+<input type=number id=n2 value=0 min="1" max="10"> 
+<br>
+<button onclick='calcularMedia(event)'>Calcular</button>
+
+<div id="resultado"></div>
+<script>
+function calcularMedia(e) {
+    e.preventDefault();
+
+    var n1=document.getElementById("n1");
+    var n2=document.getElementById("n2");
+    var media=parseInt(n1.value)+parseFloat(n2.value);
+    media=media/2;
+
+    var resultadoTexto;
+    var r=document.getElementById("resultado");
+    
+    if(media>7) {
+        resultadoTexto='Aprovado='+media;
+        r.style="color:blue";
+    }else {
+        resultadoTexto='Reprovado='+media;
+        r.style="color:red";
+    }
+    r.innerHTML=resultadoTexto;
+    alert(resultadoTexto);
+}
+</script>
+</body>
+</html>

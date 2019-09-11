@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Demo</title>
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+$( document ).ready(function() {
+ 
+ $("#b1").click(function() {
+   alert("teste de clique");
+   $("p").attr("hidden","hidden");
+ });
+
+ $("#b2").click(function() {
+   alert("teste de clique");
+   $("p").removeAttr("hidden");
+ });
+
+ $("p").click(function() {
+    $(this).attr("style", "background-color:blue; color:white");
+ });
+
+ $("p").dblclick(function() {
+    $(this).attr("style", "background-color:white; color:blue");
+ });
+
+ $("#valor").click(function() {
+  var n1 = $("#n1").val();
+  alert("Valor digitado="+n1);
+ });
+
+});
+</script>
+
+<p>Numero</p>
+<input type=text id=n1>
+<button id=valor>Exibe Valor</button>
+
+
+<button id=b1>Clique aqui para esconder</button>
+<button id=b2>Clique aqui para exibir</button>
+<h1 class=cor>Titulo</h1>
+<p class=cor> teste 2</p>
+<p class=cor> teste 3</p>
+<p> teste 4</p>
+
+
+
+</body>
+</html>
+
+
