@@ -16,7 +16,28 @@ $( document ).ready(function() {
        var n1 = getN1();
        var n2 = getN2();
        var soma = n1+n2;
-       var texto = "<h3>Resultado da soma = "+soma+"</h3>";
+       var texto = "<h3>Resultado = "+soma+"</h3>";
+       $("#resultado").html(texto);
+    })
+    $("#subtracao").click(function(){
+       var n1 = getN1();
+       var n2 = getN2();
+       var r = n1-n2;
+       var texto = "<h3>Resultado  = "+r+"</h3>";
+       $("#resultado").html(texto);
+    })
+    $("#divisao").click(function(){
+       var n1 = getN1();
+       var n2 = getN2();
+       var r = n1/n2;
+       var texto = "<h3>Resultado  = "+r+"</h3>";
+       $("#resultado").html(texto);
+    })
+    $("#multiplicacao").click(function(){
+       var n1 = getN1();
+       var n2 = getN2();
+       var r = n1*n2;
+       var texto = "<h3>Resultado  = "+r+"</h3>";
        $("#resultado").html(texto);
     })
 });
