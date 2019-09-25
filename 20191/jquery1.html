@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Demo</title>
+</head>
+<body>
+    <input type=number id=n1 placeholder="valor 1">
+    <br>
+    <input type=number id=n2 placeholder="valor 2">
+    <br><br>
+    <button id=somar>somar</button>
+    <button id=subtrair>subtrair</button>
+    <button id=multiplicar>multiplicar</button>
+    <button id=dividir>dividir</button>
+<br><br>
+    <div id=resultado> Resultado:</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+$( document ).ready(function() {
+
+  $("#somar").click(function(){
+    var n1 = $("#n1").val();
+    var n2 = $("#n2").val();
+    var resultado = parseFloat(n1)+parseFloat(n2);
+    //console.log(resultado);
+    $("#resultado").empty();
+    $("#resultado").append("Resultado: "+resultado);
+  });
+
+  $("#amarelo").click(function(){
+    $("#resultado").attr("style", "background-color:yellow; color:black");
+  });
+   
+  $("#azul").click(function(){
+    $("#resultado").attr("style", "background-color:blue; color:white");
+  });
+
+});
+</script>
+</body>
+</html>

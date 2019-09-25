@@ -1,0 +1,27 @@
+<html>
+<head>
+<script>
+function exibe() {
+	console.log("aqui");
+	var n1 = document.getElementById("n1");
+	var n2 = document.getElementById("n2");
+	var md = (parseFloat(n1.value)+parseFloat(n2.value))/2;
+
+	if (md>7){
+		alert("Aprovado media="+md);
+	}else {
+		alert("Reprovado media="+md);
+	}//fim if
+	
+}//fim exibe
+</script>
+</head>
+<body>
+
+<p>Digite Valor <input type=number value=-1 id=n1></p>
+<p>Digite Valor <input type=number value=-1 id=n2></p>
+<p><button onclick="exibe()">Clique aqui</button></p>
+
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Demo</title>
+</head>
+<body>
+
+    <button id=lgverde>liga Verde</button>
+    <button id=lgamarelo>liga Amarelo</button>
+    <button id=lgvermelho>liga Vermelho</button>
+    <br><br>
+    <button id=dsverde>desliga Verde</button>
+    <button id=dsamarelo>desliga Amarelo</button>
+    <button id=dsvermelho>desliga Vermelho</button>
+    <hr>
+    <p id=verde>Verde</p>
+    <p id=amarelo>Amarelo</p>
+    <p id=vermelho>Vermelho</p>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+$( document ).ready(function() {
+//Código das funcoes em jquery
+$("#lgverde").click(function() { //quando o mouse passar por cima do parágrafo$(this).attr("style", "background-color:blue; color:white");
+   $("#verde").attr("style", "background-color:green; color:white");
+});
+$("#dsverde").click(function() { //quando o mouse passar por cima do parágrafo$(this).attr("style", "background-color:blue; color:white");
+   $("#verde").attr("style", "background-color:white; color:black");
+});
+
+$("#lgamarelo").click(function() { //quando o mouse passar por cima do parágrafo$(this).attr("style", "background-color:blue; color:white");
+   $("#amarelo").attr("style", "background-color:yellow; color:black");
+});
+$("#dsamarelo").click(function() { //quando o mouse passar por cima do parágrafo$(this).attr("style", "background-color:blue; color:white");
+   $("#amarelo").attr("style", "background-color:white; color:black");
+});
+
+$("#lgvermelho").click(function() { //quando o mouse passar por cima do parágrafo$(this).attr("style", "background-color:blue; color:white");
+   $("#vermelho").attr("style", "background-color:red; color:white");
+});
+$("#dsvermelho").click(function() { //quando o mouse passar por cima do parágrafo$(this).attr("style", "background-color:blue; color:white");
+   $("#vermelho").attr("style", "background-color:white; color:black");
+});
+
+
+});
+</script>
+</body>
+</html>
