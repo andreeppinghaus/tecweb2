@@ -25,6 +25,7 @@ class Login {
         $this->senha =$senha;
     }
     public function verifica() {
-        $this->banco->consultar();
+        $consulta= $this->banco->consultar();
+        
     }
 }

@@ -5,7 +5,10 @@ class Banco {
     public function __construct(){
 
     }
-    public function consultar(){
+    public function conectar(){
+
+    }
+    public function consultar($sql=null){
 
     }
 }
