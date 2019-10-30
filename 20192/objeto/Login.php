@@ -25,7 +25,14 @@ class Login {
         $this->senha =$senha;
     }
     public function verifica() {
+        
         $consulta= $this->banco->consultar();
+        
+        if ($this->nome=='admin' && $this->senha=='123') {
+            return true;
+        }else{
+            return false;
+        }
         
     }
 }
