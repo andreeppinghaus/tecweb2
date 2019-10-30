@@ -38,7 +38,7 @@
   <img class="mb-4" src="https://seeklogo.com/images/U/universidade-estacio-de-sa-logo-2626AAE851-seeklogo.com.png" alt="" width="72" height="72">
   <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
   <label for="inputEmail" class="sr-only">Email address</label>
-  <input type="email" name="inputEmail" class="form-control" 
+  <input type="text" name="inputEmail" class="form-control" 
   placeholder="Email address" autofocus>
   <label for="inputPassword" class="sr-only">Password</label>
   <input type="password" name="inputPassword" class="form-control"

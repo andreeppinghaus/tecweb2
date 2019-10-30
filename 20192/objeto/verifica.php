@@ -11,8 +11,8 @@ $login->setNome($email);
 $login->setSenha($senha);
 
 if ($login->verifica()) {
-    header("Location: http://menu.php");
+    header("Location: http://localhost/menu.php");
 }else {
     echo "<script> alert('Login e senha invalidos'); </script>";
-    header("Location: http://index.php");
+   // header("Location: http://localhost/index.php");
 }
