@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+      <title>Primeira Página Javascript</title>
+    
+    </head>
+    <body>
+        <h1> Cálculo de média </h1>
+        <script>
+            function media() {
+                var n1 = 7;
+                var n2 = 8;
+                var media = (n1+n2)/2;
+                var x = document.getElementById("resultado");
+                x.innerHTML = "<h2> Sua média é: "+media+"<h2>";
+            }
+        </script>
+        <button onclick="media()"> Calcular </button>
+        <div id=resultado style="font-size: 15px; color:red;">aqui</div>
+    </body>
+</html>

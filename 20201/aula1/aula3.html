@@ -1,0 +1,26 @@
+<html>
+<body>
+   
+        <label for="nota1">Nota 1</label>
+        <input type="number" id="nota1" max=10 min=0 value=6 >
+        <br>
+        <label for="nota2">Nota 2</label>
+        <input type="number" id="nota2" max=10 min=0 value=8>
+   <script>
+       function calcularMedia() {
+           var nota1 = document.getElementById("nota1");
+           var nota2 = document.getElementById("nota2");
+        
+           // https://github.com/andreeppinghaus/tecweb2
+
+        var media = (parseInt(nota1.value)+parseInt(nota2.value))/2;
+        //    console.log(nota1.value);
+           document.getElementById("resultado").innerHTML+=media;
+       }
+   </script>
+   
+        <button onclick="calcularMedia()">Clique aqui</button>
+      <div id=resultado>Media=</div>
+
+</body>
+</html>

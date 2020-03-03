@@ -1,0 +1,39 @@
+<html>
+    <head> <meta charset="utf-8"> </head>
+<body>
+    <label for="nota1">Nota1</label>
+    <input type=number id='nota1' max=10 min=0 value=0
+      placeholder="Notas de 0 a 10"
+      >
+    <br>
+    <label for="nota2">Nota2</label>
+    <input max=10 min=0 type="number" id="nota2" value="0">
+    <button onclick="calcularMedia()">Clique</button>
+    <div id='resultado'></div> 
+    <script>
+            /**
+             * Notas:
+             *   < 5 = Reprovado
+             *   >=5 e <=8 Recuperacao
+             * >8 aprovado
+             **/
+   
+        function calcularMedia() {
+            var n1, n2, media;
+            n1 = document.getElementById("nota1");
+            n2 = document.getElementById("nota2");
+            
+            media=(parseFloat(n1.value)+parseInt(n2.value))/2;
+
+            if (media<5) {
+            document.getElementById("resultado").innerHTML="Reprovado";
+            }else if (media>=5 && media <=8) {
+                document.getElementById("resultado").innerHTML="Recuperacao";
+            }else {
+                document.getElementById("resultado").innerHTML="Aprovado";
+            }
+            console.log(media);
+        }
+    </script>
+</body>
+</html>
