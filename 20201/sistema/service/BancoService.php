@@ -6,11 +6,20 @@ class BancoService {
     private $password;
     private $dbh;
     
-    function __construct($dsn, $user, $password) {
+    function __construct($dsn="", $user="", $password="") {
     
-        $this->dsn = $dsn;
-        $this->user= $user;
-        $this->password = $password;
+        if (empty($dsn) ) {
+                        //  'mysql:dbname=id13482607_aula_php;host=localhost'
+            $this->dsn = 'mysql:dbname=id13482607_aula_php;host=localhost';
+            $this->user= 'id13482607_root';
+            $this->password = 'andre_Eppinghaus1234';
+            
+        }else {
+            $this->dsn = $dsn;
+            $this->user= $user;
+            $this->password = $password;
+                
+        }
         
        $this->connect();
     }
@@ -32,37 +41,36 @@ class BancoService {
     }
     
     public function query($sql){
-        
-        foreach ($this->dbh->query($sql) as $row) {
-            print "<br>";
-            print $row['id'] . "\t";
-            print $row['login'] . "\t";
-            print $row['senha'] . "\t";
-        }
+        return $this->dbh->query($sql);
     }
 
 }
 
-$dsn = 'mysql:dbname=id13482607_aula_php;host=localhost';
 
-$user ='id13482607_root';
-$password = 'andre_Eppinghaus1234';
+// $dsn = 'mysql:dbname=id13482607_aula_php;host=localhost';
 
-$banco = new BancoService($dsn, $user, $password);
+// $user ='id13482607_root';
+// $password = 'andre_Eppinghaus1234';
+
+
 /*
 //inclusao de registro
 $sql="insert into usuario(login,senha) values('admin', '123')";
 
 $contador = $banco->exec($sql);
 echo "<b>Incluiu $contador - registro(s)";
-*/
 
 
-
+$banco = new BancoService();
 
 $sql = "select * from usuario";
-$banco->query($sql);
+$dados = $banco->query($sql);
 
 
+foreach ( $dados as $linha) {
+    echo "<br>";
+    echo $linha["id"] ." - ". $linha["login"]." = ".$linha["senha"];
 
+}
 
+*/
